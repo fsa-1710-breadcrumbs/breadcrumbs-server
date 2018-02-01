@@ -8,7 +8,7 @@ const User = db.define('user', {
   },
   photoUrl: {
     type: Sequelize.STRING,
-    defaultValue: '/assets/defaultPanda.jpg'
+    defaultValue: '../../assets/defaultPanda.jpg'
   },
   email: {
     type: Sequelize.STRING,

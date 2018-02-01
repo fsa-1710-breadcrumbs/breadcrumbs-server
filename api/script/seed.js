@@ -26,6 +26,7 @@ const users = [
   {
     name: 'Jesse Moskowitz',
     email: 'jesse@jesse.com',
+    photoUrl: 'https://avatars2.githubusercontent.com/u/12431338?s=460&v=4',
     password: 'jesse',
     isAdmin: true,
     userId: 4
@@ -33,6 +34,7 @@ const users = [
   {
     name: 'Kevin Ho',
     email: 'kevin@kevin.com',
+    photoUrl: 'https://avatars1.githubusercontent.com/u/15680221?s=460&v=4',
     password: 'kevin',
     isAdmin: true,
     userId: 5
@@ -40,6 +42,7 @@ const users = [
   {
     name: 'Shannen Ye',
     email: 'shannen@shannen.com',
+    photoUrl: 'https://avatars1.githubusercontent.com/u/30578065?s=460&v=4',
     password: 'shannen',
     isAdmin: true,
     userId: 6
@@ -47,6 +50,7 @@ const users = [
   {
     name: 'Vanessa Jimenez',
     email: 'vanessa@vanessa.com',
+    photoUrl: 'https://avatars2.githubusercontent.com/u/16891417?s=460&v=4',
     password: 'vanessa',
     isAdmin: true,
     userId: 7
