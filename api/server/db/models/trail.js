@@ -5,7 +5,10 @@ const Trail = db.define('trail', {
   breadcrumbs: {
     type: Sequelize.ARRAY(Sequelize.JSONB)
   },
-  description: {
+  origin: {
+    type: Sequelize.TEXT
+  },
+  destination: {
     type: Sequelize.TEXT
   },
   photoUrl: {
