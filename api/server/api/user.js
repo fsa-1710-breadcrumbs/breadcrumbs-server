@@ -20,7 +20,7 @@ router.param('id', (req, res, next, id) => {
 
 router.get('/', (req, res, next) => {
   User.findAll({
-    attributes: ['id', 'email']
+    attributes: ['id', 'email', 'name', 'photoUrl']
   })
     .then(users => res.json(users.map(user => user.sanitize())))
     .catch(next);
