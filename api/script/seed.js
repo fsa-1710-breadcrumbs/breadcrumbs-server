@@ -3,14 +3,14 @@ const { User, Trail } = require('../server/db/models');
 
 const users = [
   {
-    name: 'hansel gretel',
+    name: 'Hansel Gretel',
     email: 'hansel@hansel.com',
     password: 'hansel',
     isAdmin: false,
     userId: 1
   },
   {
-    name: 'panda manda',
+    name: 'Panda Manda',
     email: 'panda@panda.com',
     password: 'panda',
     isAdmin: false,
@@ -24,28 +24,28 @@ const users = [
     userId: 3
   },
   {
-    name: 'jesse moskowitz',
+    name: 'Jesse Moskowitz',
     email: 'jesse@jesse.com',
     password: 'jesse',
     isAdmin: true,
     userId: 4
   },
   {
-    name: 'kevin ho',
+    name: 'Kevin Ho',
     email: 'kevin@kevin.com',
     password: 'kevin',
     isAdmin: true,
     userId: 5
   },
   {
-    name: 'shannen ye',
+    name: 'Shannen Ye',
     email: 'shannen@shannen.com',
     password: 'shannen',
     isAdmin: true,
     userId: 6
   },
   {
-    name: 'vanessa jimenez',
+    name: 'Vanessa Jimenez',
     email: 'vanessa@vanessa.com',
     password: 'vanessa',
     isAdmin: true,
@@ -88,7 +88,7 @@ const trails = [
            "z": -5.660594407252982,
          }
        ],
-    userId: 1
+    userId: 5
   },
   {
     description: "Kevin's seat 3D trail test on x-y-z planes",
@@ -101,7 +101,7 @@ const trails = [
      {"x": 1, "y": 0.5, "z": -1},
      {"x": 1, "y": 1, "z": -1}
     ],
-    userId: 2
+    userId: 3
   }
 ];
 
