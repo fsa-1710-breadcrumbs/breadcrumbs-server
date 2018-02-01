@@ -32,17 +32,8 @@ router.get('/:id', function (req, res, next) {
 
 // POST /api/trail
 router.post('/', (req, res, next) => {
-  Trail.create({
-      where: {
-       origin: req.body.origin,
-       destination: req.body.destination,
-       breadcrumbs: req.body.coords,
-       userId: req.body.userId
-    }
-  })
-    .then(createdTrail => {
-      res.json(createdTrail);
-    })
+  Trail.create(req.body)
+    .then(createdTrail => res.json(createdTrail))
     .catch(next);
 });
 
