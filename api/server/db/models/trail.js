@@ -13,7 +13,7 @@ const Trail = db.define('trail', {
   },
   photoUrl: {
     type: Sequelize.STRING,
-    defaultValue: '/assets/defaultTrail.png'
+    defaultValue: '../../assets/defaultTrail.png'
   }
 });
 
