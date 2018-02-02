@@ -12,13 +12,7 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/', (req, res, next) => {
-  Trail.create({
-      where: {
-       breadcrumbs: req.body.coords,
-       description: req.body.timestamp,
-       userId: req.body.userId
-    }
-  })
+  Trail.create(req.body)
     .then(createdTrail => {
       res.json(createdTrail);
     })
