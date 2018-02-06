@@ -2,7 +2,10 @@ const User = require('./user');
 const Trail = require('./trail');
 
 Trail.belongsTo(User);
-User.hasMany(Trail);
+User.hasMany(Trail, {
+  onDelete: 'cascade',
+  hooks: true
+});
 
 /*
 Available instance methods:
