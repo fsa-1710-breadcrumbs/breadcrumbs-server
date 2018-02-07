@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const s3upload = require('../../../utils/s3upload');
 const { User, Trail } = require('../db/models');
 
 module.exports = router;
@@ -31,7 +32,7 @@ router.get('/:id', function (req, res, next) {
 });
 
 // POST /api/trail
-router.post('/', (req, res, next) => {
+router.post('/', s3upload.uploadToS3, (req, res, next) => {
   Trail.create(req.body)
     .then(createdTrail => res.json(createdTrail))
     .catch(next);

@@ -6,6 +6,7 @@ module.exports = router;
 router.use('/users', require('./user'));
 //  heroku.com/api/trail
 router.use('/trails', require('./trail'));
+// router.use('/aws', require('./aws'));
 
 router.use((req, res, next) => {
   const error = new Error('Not Found');

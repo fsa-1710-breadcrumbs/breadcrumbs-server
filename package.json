@@ -10,6 +10,7 @@
     "start-dev": "nodemon api/server/index.js"
   },
   "dependencies": {
+    "aws-sdk": "^2.189.0",
     "axios": "^0.17.1",
     "body-parser": "^1.18.2",
     "chai": "^4.1.2",
