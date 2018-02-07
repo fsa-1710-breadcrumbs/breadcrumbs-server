@@ -48,11 +48,21 @@ router.put('/:id',
       .catch(next);
   });
 
-router.delete('/:id',
-  gatekeeperMiddleware.isLoggedIn,
-  gatekeeperMiddleware.isAdminOrSelf,
-  (req, res, next) => {
+// router.delete('/:id',
+//   gatekeeperMiddleware.isLoggedIn,
+//   gatekeeperMiddleware.isAdminOrSelf,
+//   (req, res, next) => {
+//     console.log("you are in backend")
+//     req.requestedUser.destroy()
+//       .then(() => res.sendStatus(204))
+//       .catch(next);
+//   });
+router.delete('/:id', (req, res, next) => {
+  if (gatekeeperMiddleware.isAdminOrSelf) {
     req.requestedUser.destroy()
-      .then(() => res.sendStatus(204))
-      .catch(next);
-  });
+    .then(() => res.sendStatus(202))
+    .catch(next);
+  } else {
+    res.sendStatus(500);
+  }
+});

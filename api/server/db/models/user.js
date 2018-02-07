@@ -1,6 +1,7 @@
 const crypto = require('crypto');
 const Sequelize = require('sequelize');
 const db = require('../db');
+const Trail = require('./trail');
 
 const User = db.define('user', {
   name: {
@@ -70,3 +71,11 @@ const setSaltAndPassword = user => {
 
 User.beforeCreate(setSaltAndPassword);
 User.beforeUpdate(setSaltAndPassword);
+
+User.beforeDestroy(user => {
+  return Trail.destroy({
+    where: {
+      userId: user.id
+    }
+  })
+});
