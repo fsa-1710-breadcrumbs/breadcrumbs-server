@@ -11,14 +11,6 @@ const db = require('./db');
 const PORT = process.env.PORT || 1337;
 const app = express();
 
-const AWS = require('aws-sdk');
-const s3 = new AWS.S3({accessKeyId: 'AKIAICADIWZJOJLNE7UQ', secretAccessKey: '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', region: 'us-east-1'});
-
-const params = {Bucket: 'crumbs-deployments-mobilehub-546753528', Key: 'images/myimage.jpg', ContentType: 'image/jpeg'};
-// s3.getSignedUrl('putObject', params, function (err, url) {
-//     console.log('Your generated pre-signed URL is', url);
-// })
-
 module.exports = app;
 
 if (process.env.NODE_ENV !== 'production') require('../../Secrets');
@@ -82,11 +74,7 @@ const createApp = () => {
 
 const startListening = () => {
   const server = app.listen(PORT, () => {
-    console.log(`Listening on http://localhost:${server.address().port}`)
-    // s3.getSignedUrl('putObject', params, function (err, url) {
-    // console.log('Your generated pre-signed URL is', url);
-
-    // })
+    console.log(`Listening on http://localhost:${server.address().port}`);
   });
 
   // Future implementation:  set up our socket control center here if we use it.
